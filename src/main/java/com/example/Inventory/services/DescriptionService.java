@@ -1,4 +1,4 @@
-package services;
+package com.example.Inventory.services;
 
 import com.example.Inventory.entities.Description;
 

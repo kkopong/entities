@@ -1,0 +1,60 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd" objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1730807640395-1" author="KOBBY">
+        <createTable tableName="USER">
+            <column name="user_id" type="UUID">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="request_device" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_name" type="VARCHAR(50)">
+              <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1730807640395-2" author="KOBBY">
+        <createTable tableName="ADMIN">
+            <column name="ADMIN_ID" type="UUID">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="USER_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DESCRIPTION" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AUTHORIZE" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1730807640395-3" author="KOBBY">
+        <createTable tableName="DESCRIPTION">
+            <column name="PRODUCT_NAME" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="COLOR" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BRAND" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FUNCTIONALITY" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MANU_COMPANY" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1730807640395-4" author="KOBBY">
+        <createTable tableName="AUTHORIZE">
+            <column name="ACCEPT" type="ENUM">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DECLINE" type="ENUM">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
