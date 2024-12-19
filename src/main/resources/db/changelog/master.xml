@@ -8,5 +8,5 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
     <property name="datetimeType" value="datetime(6)" dbms="mysql, mariadb"/>
     <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
-    <include file="db/changelog/2024/11/init-changelog.xml"/>
+    <include file="db/changelog/2024/12/init-changelog.xml"/>
 </databaseChangeLog>
