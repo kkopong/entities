@@ -1,0 +1,15 @@
+
+
+        services:
+          postgres:
+            image: postgres:15
+            container_name: inventory-container
+            ports:
+              - "5435:5432"
+            environment:
+              POSTGRES_USER: kobby
+              POSTGRES_PASSWORD: kobby/2004
+              POSTGRES_DB: inventorydb
+            volumes:
+              - ./postgres_data:/var/lib/postgresql/data
+            restart: unless-stopped
